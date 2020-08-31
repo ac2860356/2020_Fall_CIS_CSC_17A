@@ -1,2 +1,2 @@
-# ChoyArthur_CIS17A_40366
-Programming Concepts and Methodologies RCC Spring 2020
+# 2020_Fall_CSC_CIS_17a
+C++ Classes/Objects

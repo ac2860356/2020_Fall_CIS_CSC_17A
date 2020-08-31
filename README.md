@@ -1,2 +1,2 @@
-# ChoyArthur_CIS17A_40366
-Programming Concepts and Methodologies RCC Spring 2020
+# ChoyArthur_CSC17A_49287
+Programming Concepts and Methodologies RCC Fall 2020

@@ -167,6 +167,14 @@ void runDiag() {
     
     p1.dspHand();
     
+    //***************************************
+    //  Testing removing duplicate cards
+    //***************************************
+    cout << endl << "Removing duplicate cards from players hands..." << endl;
+    cout << endl << "Augmenting hand..." << endl;
+    p1.dupRmve();
+    p1.dspHand();
+    
     //*************************************
     //  Testing card playing
     //*************************************

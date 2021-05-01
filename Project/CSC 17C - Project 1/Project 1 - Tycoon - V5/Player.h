@@ -19,6 +19,11 @@ public:
     //Exception class
     class BadPlay
         { };                    //Exception class for when player attempts to play cards they don't have
+        
+    struct cmp {
+        bool operator() (const std::pair<std::string, int>& lhs, const std::pair<std::string, int>& rhs) const
+        { return lhs.second > rhs.second; }
+    };
     
     Player();                   //Default constructor
     Player(std::string);        //Constructor
@@ -31,7 +36,7 @@ public:
     std::string getName() const { return name; }    //Accessor for name
     
     //Player hand related functions
-    void srtHand();                                 //Sort player's hand
+    void dupRmve();                                 //Remove duplicate cards in player's hand
     void dspHand();                                 //Display player's hand
     void addHand(std::pair<std::string, int>);      //Add a card to player's hand
     void clearHand() { hand->clear(); }             //Clear player's hand

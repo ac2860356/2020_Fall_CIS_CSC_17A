@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <iomanip>
+#include <set>
 #include <algorithm>
 #include "Player.h"
 using namespace std;
@@ -37,6 +38,17 @@ Player::Player(const Player& orig) {
 
 Player::~Player() {
     delete hand;
+}
+
+void Player::dupRmve() {
+    std::set<std::pair<std::string, int>, cmp> order;
+    for(std::list<std::pair<std::string, int>>::iterator i = hand->begin(); i != hand->end(); i++) {
+        order.insert((*i));
+    }
+    hand->clear();
+    for(std::set<std::pair<std::string, int>, cmp>::iterator i = order.begin(); i != order.end(); i++) {
+        hand->push_front(*i);
+    }
 }
 
 void Player::dspHand() {
